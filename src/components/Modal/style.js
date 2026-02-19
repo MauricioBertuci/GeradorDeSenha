@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         width: "85%",
         paddingTop: 24,
         paddingBottom: 24,
-        alignContent: "center",
+        alignItems: "center",
         justifyContent: "cente",
         borderRadius: 8
     },
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     },
     text: {
         color: "#fff",
-        textAlign: 'center'
+        textAlign: "center",
     },
     buttonArea: {
         flexDirection: "row",

@@ -8,8 +8,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
+    width: 200,  
+    height: 200, 
     marginBottom: 60,
-    
   },
   area: {
     marginTop: 14,

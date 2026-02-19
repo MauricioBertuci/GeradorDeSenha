@@ -13,9 +13,11 @@ const numeros   = "0123456789";
 const simbolo   = "!@#$%&*()";
 const charset = minuscula+maiuscula+simbolo+numeros;
 
-export default function App() {
-  const [size,setSize] = useState(13)
-  const [passwordValue, setPasswordValue] = useState("")
+export function Main() {
+  const [size,setSize] = useState(13);
+  const [passwordValue, setPasswordValue] = useState("");
+  const [modalVisivle, setModalVisible] = useState(false);
+
 
     function generationPassword() {
       let password = "";
@@ -24,6 +26,7 @@ export default function App() {
       }
       console.log(password)
       setPasswordValue(password)
+      setModalVisible(true)
     }
 
 
@@ -45,8 +48,8 @@ export default function App() {
         <Text style={styles.buttonText} onPress={generationPassword}>Gerar senha</Text>
       </TouchableOpacity>
 
-      <Modal>
-        <ModalPassword></ModalPassword>
+      <Modal visible={modalVisivle} transparent={true} animationType='fade'>
+        <ModalPassword password={passwordValue} handleClose={() => setModalVisible(false)}></ModalPassword>
       </Modal>
 
     </View>
